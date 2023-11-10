@@ -5,14 +5,14 @@ import '../index.css'
 const PersonalDetails = ({personalDetails, onChange})=>{
     return (
         <div className="personal-details">
-            <h5>Personal Details</h5>
+            <h5><i className="bi bi-person m-1"></i>Personal Details</h5>
             <div className="card d-flex flex-column">
-                <Input label='First Name' placeholder='First Name' value={personalDetails.firstName} onChange={onChange} name='firstName'/>
-                <Input label='Second Name' placeholder='Second Name' value={personalDetails.secondName} onChange={onChange} name='secondName'/>
-                <Input label='City' placeholder='City' value={personalDetails.city} onChange={onChange} name='city'/>
-                <Input label='Country' placeholder='Country' value={personalDetails.country} onChange={onChange} name='country'/>
-                <Input label='Tel. No' placeholder='Telephone' value={personalDetails.telephone} onChange={onChange} name='telephone'/>
-                <Input label='Email' placeholder='E-mail' value={personalDetails.email} onChange={onChange} name='email'/>
+                <Input  placeholder='First Name' value={personalDetails.firstName} onChange={onChange} name='firstName'/>
+                <Input  placeholder='Second Name' value={personalDetails.secondName} onChange={onChange} name='secondName'/>
+                <Input  placeholder='City' value={personalDetails.city} onChange={onChange} name='city'/>
+                <Input  placeholder='Country' value={personalDetails.country} onChange={onChange} name='country'/>
+                <Input  placeholder='Telephone' value={personalDetails.telephone} onChange={onChange} name='telephone'/>
+                <Input  placeholder='E-mail' value={personalDetails.email} onChange={onChange} name='email'/>
             </div>
         </div>
     )

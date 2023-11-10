@@ -14,7 +14,7 @@ const Skills = ({handleSubmit})=>{
     return (
         <form className="skills card p-2" onSubmit={onSubmit}>
             <div className="skills-title d-flex justify-content-between">
-                <h5>Skills</h5>
+                <h5><i className="bi bi-tools m-1"></i>Skills</h5>
                 {isOpen ? <i className="bi bi-arrow-up-circle" onClick={()=>setOpen(false)}/> : <i className="bi bi-arrow-down-circle" onClick={()=>setOpen(true)}/>}
             </div>
             <div className={isOpen ? 'd-block d-flex align-items-center justify-content-between' : 'd-none'}>

@@ -1,3 +1,8 @@
+.navbar{
+  background-color: lightgray;
+  font-size: 25px;
+  text-align: center;
+}
 p{
   padding:0px;
   margin: 0px;
@@ -9,12 +14,13 @@ p{
   border-bottom: 1px solid lightgray;
 }
 .input-box:focus{
-  border: 1px solid lightgray;
+  border: none;
 }
 .personal-details{
-  width: 320px;
+  width: 340px;
   margin: 25px;
 }
+
 .personal-details > .card{
   padding: 10px;
 }
@@ -22,7 +28,7 @@ p{
   margin: 25px;
 }
 .personal-summary>.card{
-  width: 320px;
+  width: 340px;
   height: 200px;
   padding: 5px;
 }
@@ -88,6 +94,7 @@ p{
 }
 .cv-education{
   margin-bottom: 10px;
+  gap: 200px;
 }
 .progress-bar{
   width: 50px;
@@ -96,44 +103,32 @@ p{
   .Generator{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .personal-details{
-    width: 700px;
-    margin: 25px;
+    width: 450px;
   }
   .personal-details > .card{
     padding: 10px;
   }
-  .personal-summary{
-    margin: 25px;
-  }
   .personal-summary>.card{
-    width: 700px;
+    width: 450px;
     height: 200px;
   }
   .experience{
-    width: 700px;
-    margin: 25px;
+    width: 450px;
   }
   .skills{
-    width: 700px;
-    margin: 25px;
+    width: 450px;
   }
   .education{
-    width: 700px;
-    margin: 25px;
+    width: 450px;
   }
   .language{
-    width: 700px;
-    margin: 25px;
-  }
-  .form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 700px;
+    width: 450px;
   }
   .cv-template{
-    width: 700px;
+    width: 450px;
   }
 }

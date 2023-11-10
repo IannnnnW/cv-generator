@@ -1,14 +1,15 @@
 import React from "react";
 import Experience from "./cv-experience";
 import { ProgressBar } from "react-bootstrap";
+import Education from "./cv-education";
 
 const CVTemplate = ({personalDetails, summary, experience, skills, education, languages})=>{
     return(
         <div className="card p-3">
             <div className="header d-flex justify-content-between align-items-center">
-                <h6><span className="text">{personalDetails.country} {` - ${personalDetails.city}`}</span></h6>
-                <h6><span className="text">{personalDetails.telephone}</span></h6>
-                <h6><span className="text">{personalDetails.email}</span></h6>
+                <h6><span className="text"><i className="bi bi-geo-alt m-1"/>{personalDetails.country} {` - ${personalDetails.city}`}</span></h6>
+                <h6><span className="text"><i className="bi bi-telephone m-1"/>{personalDetails.telephone}</span></h6>
+                <h6><span className="text"><i className="bi bi-envelope m-1"/>{personalDetails.email}</span></h6>
             </div>
             <div className="section-one d-flex gap-5 p-2">
                 <img src="logo512.png" className="person" alt="logo"/>
@@ -46,15 +47,8 @@ const CVTemplate = ({personalDetails, summary, experience, skills, education, la
             <div className="section-five d-flex gap-5 p-2">
                 <h6>Education:</h6>
                 <div>
-                    {education.map(e => (
-                        <div className="cv-education">
-                            <h6>Award: <span className="text">{e.award}</span></h6>
-                            <h6>Institute, City: <span className="text">{e.institute}, {e.city}</span></h6>
-                            <div className="d-flex gap-5">
-                                <h6>From: <span className="text">{e.from}</span></h6>
-                                <h6>To: <span className="text">{e.to}</span></h6>
-                            </div>
-                        </div>
+                    {education.map((e) => (
+                        <Education key={e.id} award={e.award} institute={e.institute} city={e.city} from={e.from} to={e.to}/>
                     ))}
                 </div>
             </div>

@@ -60,17 +60,20 @@ const App = ()=>{
         ]))
     }
     return (
-        <div className="Generator d-flex justify-content-center"> 
-            <div className="form">
-                <PersonalDetails personalDetails={personalDetails} onChange={handlechange}/>
-                <Summary summary={summary} onChange={handleSummaryChange}/>
-                <Experience handleSubmit={handleExperienceSubmit}/>
-                <Skills handleSubmit={handleSkillsSubmit}/>
-                <Education handleSubmit={handleEducationSubmit}/>
-                <Language handleSubmit={handleLanguageSubmit}/>
-            </div>
-            <div className="cv-template">
-               <CVTemplate personalDetails={personalDetails} summary={summary} experience={experienceArray} skills={skills} education={educationArray} languages={languagesArray}/> 
+        <div>
+            <nav className="navbar d-flex justify-content-center"><i className="bi bi-file-earmark-person m-1"></i> CV Generator</nav>
+            <div className="Generator d-flex justify-content-center"> 
+                <div>
+                    <PersonalDetails personalDetails={personalDetails} onChange={handlechange}/>
+                    <Summary summary={summary} onChange={handleSummaryChange}/>
+                    <Experience handleSubmit={handleExperienceSubmit}/>
+                    <Skills handleSubmit={handleSkillsSubmit}/>
+                    <Education handleSubmit={handleEducationSubmit}/>
+                    <Language handleSubmit={handleLanguageSubmit}/>
+                </div>
+                <div className="cv-template">
+                    <CVTemplate personalDetails={personalDetails} summary={summary} experience={experienceArray} skills={skills} education={educationArray} languages={languagesArray}/> 
+                </div>
             </div>
         </div>
     )

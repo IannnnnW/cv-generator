@@ -19,7 +19,7 @@ const Language = ({handleSubmit})=>{
     return (
         <form className="language card p-2" onSubmit={onSubmit}>
             <div className="language-title d-flex justify-content-between">
-                <h5>Language</h5>
+                <h5><i className="bi bi-megaphone m-1"></i>Language</h5>
                 {isOpen ? <i className="bi bi-arrow-up-circle" onClick={()=>setOpen(false)}/> : <i className="bi bi-arrow-down-circle" onClick={()=>setOpen(true)}/>}
             </div>
             <div className={isOpen ? 'd-block d-flex flex-column  justify-content-between' : 'd-none'}>
