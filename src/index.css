@@ -29,7 +29,6 @@ p{
   width: 340px;
   margin: 25px;
 }
-
 .personal-details > .card{
   padding: 10px;
 }
@@ -117,6 +116,7 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 950px;
   }
   .personal-details{
     max-width: 350px;
@@ -150,10 +150,21 @@ p{
     display: flex;
     flex-direction: column;
   }
-  .cv-template{
-   display: none;
-  }
   .function-buttons{
-    display: block !important;
+    display: flex;
+    gap: 135px;
+    position: fixed;
+    bottom: 0;
+    left: 25px;
+    width: 100%;
+    color: #fff;
+    padding: 10px;
+  }
+  .person{
+    display: none;
+  }
+  .cv-template{
+    height: 900px;
+    width: 500px;
   }
 }

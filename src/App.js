@@ -8,6 +8,7 @@ import Language from "./components/Language";
 import CVTemplate from "./components/cv-template";
 
 const App = ()=>{
+    const [toggleView, setToggleView] = useState(false)
     const [personalDetails, setPersonalDetails] = useState({
         firstName: '', 
         secondName: '', 
@@ -63,7 +64,7 @@ const App = ()=>{
         <div className="body">
             <nav className="navbar d-flex justify-content-center"><i className="bi bi-file-earmark-person m-1"></i> CV Generator</nav>
             <div className="Generator d-flex justify-content-center"> 
-                <div className="input-form">
+                <div className={!toggleView ? "input-form" : "d-none"}>
                     <PersonalDetails personalDetails={personalDetails} onChange={handlechange}/>
                     <Summary summary={summary} onChange={handleSummaryChange}/>
                     <Experience handleSubmit={handleExperienceSubmit}/>
@@ -71,11 +72,11 @@ const App = ()=>{
                     <Education handleSubmit={handleEducationSubmit}/>
                     <Language handleSubmit={handleLanguageSubmit}/>
                 </div>
-                <div className="d-flex gap-3 d-none">
-                    <button className="btn btn-primary"><i className="bi bi-eye"></i> View CV</button>
-                    <button className="btn btn-secondary"><i class="bi bi-printer"></i> Print CV</button>
+                <div className="function-buttons">
+                    <button className="btn btn-primary btn-view" onClick={()=>setToggleView(!toggleView)}><i className="bi bi-eye"></i> View CV</button>
+                    <button className="btn btn-secondary btn-print"><i class="bi bi-printer"></i> Print CV</button>
                 </div>
-                <div className="cv-template">
+                <div className={toggleView ? "cv-template" : "d-none"}>
                     <CVTemplate personalDetails={personalDetails} summary={summary} experience={experienceArray} skills={skills} education={educationArray} languages={languagesArray}/> 
                 </div>
             </div>
