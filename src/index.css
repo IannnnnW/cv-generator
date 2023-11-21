@@ -1,3 +1,10 @@
+.card{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.bi:hover{
+  background-color: white !important;
+  border: none;
+}
 .navbar{
   background-color: lightgray;
   font-size: 25px;
@@ -10,7 +17,7 @@ p{
 
 .input-box{
   border: none;
-  width: 230px;
+  width: 320px;
 }
 .input-box:hover{
   border-bottom: 1px solid lightgray;
