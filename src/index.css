@@ -10,6 +10,7 @@ p{
 
 .input-box{
   border: none;
+  width: 230px;
 }
 .input-box:hover{
   border-bottom: 1px solid lightgray;
@@ -104,16 +105,6 @@ p{
   display: none;
 }
 @media screen and (max-width: 700px){
-  .navbar{
-    width: 300px;
-    text-align: center;
-  }
-  #root{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
   .Generator{
     display: flex;
     flex-direction: column;
@@ -121,29 +112,29 @@ p{
     align-items: center;
   }
   .personal-details{
-    max-width: 200px;
+    max-width: 350px;
   }
   .personal-details > .card{
     padding: 10px;
   }
   .personal-summary>.card{
-    max-width: 200px;
-    height: 200px;
+    max-width: 350px;
+    height: 250px;
   }
   .experience{
-    max-width: 200px;
+    max-width: 350px;
   }
   .skills{
-    max-width: 200px;
+    max-width: 350px;
   }
   .education{
-    max-width: 200px;
+    max-width: 350px;
   }
   .language{
-    max-width: 200px;
+    max-width: 350px;
   }
   .cv-template{
-    max-width: 200px;
+    max-width: 350px;
   }
   .experience-summary{
     width: 180px;
@@ -154,5 +145,8 @@ p{
   }
   .cv-template{
    display: none;
+  }
+  .function-buttons{
+    display: block !important;
   }
 }
