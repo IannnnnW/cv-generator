@@ -7,6 +7,7 @@ p{
   padding:0px;
   margin: 0px;
 }
+
 .input-box{
   border: none;
 }
@@ -99,7 +100,17 @@ p{
 .progress-bar{
   width: 50px;
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 700px){
+  .navbar{
+    width: 300px;
+    text-align: center;
+  }
+  #root{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .Generator{
     display: flex;
     flex-direction: column;
@@ -107,28 +118,38 @@ p{
     align-items: center;
   }
   .personal-details{
-    width: 450px;
+    max-width: 200px;
   }
   .personal-details > .card{
     padding: 10px;
   }
   .personal-summary>.card{
-    width: 450px;
+    max-width: 200px;
     height: 200px;
   }
   .experience{
-    width: 450px;
+    max-width: 200px;
   }
   .skills{
-    width: 450px;
+    max-width: 200px;
   }
   .education{
-    width: 450px;
+    max-width: 200px;
   }
   .language{
-    width: 450px;
+    max-width: 200px;
   }
   .cv-template{
-    width: 450px;
+    max-width: 200px;
+  }
+  .experience-summary{
+    width: 180px;
+  }
+  .skill-body{
+    display: flex;
+    flex-direction: column;
+  }
+  .cv-template{
+   display: none;
   }
 }

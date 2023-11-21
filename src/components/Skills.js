@@ -17,7 +17,7 @@ const Skills = ({handleSubmit})=>{
                 <h5><i className="bi bi-tools m-1"></i>Skills</h5>
                 {isOpen ? <i className="bi bi-arrow-up-circle" onClick={()=>setOpen(false)}/> : <i className="bi bi-arrow-down-circle" onClick={()=>setOpen(true)}/>}
             </div>
-            <div className={isOpen ? 'd-block d-flex align-items-center justify-content-between' : 'd-none'}>
+            <div className={isOpen ? 'd-block d-flex align-items-center justify-content-between skill-body' : 'd-none skill-body'}>
                 <Input label='Skill' placeholder='Add Skill...' onChange={(e)=>{skill = e.target.value}} />
                 <button type='submit' className="btn btn-secondary mt-2">Add</button>
             </div>
