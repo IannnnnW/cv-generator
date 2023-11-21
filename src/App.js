@@ -71,7 +71,7 @@ const App = ()=>{
                     <Education handleSubmit={handleEducationSubmit}/>
                     <Language handleSubmit={handleLanguageSubmit}/>
                 </div>
-                <div className="d-flex gap-3">
+                <div className="d-flex gap-3 function-buttons">
                     <button className="btn btn-primary"><i className="bi bi-eye"></i> View CV</button>
                     <button className="btn btn-secondary"><i class="bi bi-printer"></i> Print CV</button>
                 </div>
