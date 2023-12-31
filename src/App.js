@@ -75,7 +75,7 @@ const App = ()=>{
                     <Education handleSubmit={handleEducationSubmit}/>
                     <Language handleSubmit={handleLanguageSubmit}/>
                 </div>
-                <div className="cv-template" style={toggleView ? {display:"block"} : {display:"none"}}>
+                <div className="cv-template" style={toggleView ? {display:"block"} : null}>
                     <CVTemplate ref={printableRef} personalDetails={personalDetails} summary={summary} experience={experienceArray} skills={skills} education={educationArray} languages={languagesArray}/> 
                 </div>
                 <div className="function-buttons">

@@ -27,6 +27,27 @@ p{
   margin: 0px;
 }
 
+.function-buttons{
+  position: absolute;
+  right: 0;
+  top: 550px;
+  justify-content: center;
+  color: #fff;
+  padding: 5px;
+}
+
+.bi-printer{
+  font-size: 32px;
+  color: #60b0f4;
+}
+
+.btn-print{
+background-color: white;
+border-radius: 25px;
+box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+border: none;
+}
+
 .input-box{
   border: none;
   width: 100%;
@@ -114,7 +135,8 @@ p{
 .progress-bar{
   width: 50px;
 }
-.function-buttons{
+
+.btn-view{
   display: none;
 }
 
@@ -139,13 +161,6 @@ p{
   }
   .cv-template{
     display: none;
-    position: fixed;
-    top:5px;
-    height: 90vh;
-    width: 90vw;
-    min-width: min-content;
-    overflow-y: auto;
-    overflow-x: auto;
   }
   .section-one, 
   .section-two, 
@@ -170,9 +185,6 @@ p{
     color: #fff;
     padding: 5px;
   }
-  .person{
-    display: block;
-  }
 
   .btn-view, .btn-print{
   background-color: white;
@@ -185,6 +197,10 @@ p{
     padding: 5px;
     color: #60b0f4;
   }
+
+  .btn-view{
+    display: block;
+  }
   
 }
 
@@ -193,5 +209,29 @@ p{
     display: flex;
     flex-direction: column;
     gap: 50px;
+  }
+  .btn-view, .btn-print{
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    border: none;
+    }
+  .function-buttons{
+    display: flex;
+    position: sticky;
+    bottom: 0;
+    justify-content: center;
+    color: #fff;
+    padding: 5px;
+  }
+  .bi-printer{
+    font-size: 32px;
+    color: #60b0f4;
+  }
+  .btn-print{
+    border-radius: 40px;
+  }
+  .btn-view{
+    display: none;
   }
 }
