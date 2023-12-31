@@ -8,13 +8,15 @@ const Language = ({handleSubmit})=>{
         language: '',
         proficiency: null
     })
-    function onSubmit(event){
-        event.preventDefault()
+    function onSubmit(e){
+        e.preventDefault()
         handleSubmit(languageSetting)
         setLanguageSetting({
             language: '',
             proficiency: null
         })        
+        e.target.reset()
+
     }
     return (
         <form className="language card p-2" onSubmit={onSubmit}>

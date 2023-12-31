@@ -6,9 +6,12 @@ import Skills from "./components/Skills";
 import Education from "./components/Education";
 import Language from "./components/Language";
 import CVTemplate from "./components/cv-template";
+import ReactToPrint from "react-to-print";
 
 const App = ()=>{
-    const [toggleView, setToggleView] = useState(false)
+    const printableRef = React.createRef();
+
+    const [toggleView, setToggleView] = useState(true)
     const [personalDetails, setPersonalDetails] = useState({
         firstName: '', 
         secondName: '', 
@@ -62,9 +65,9 @@ const App = ()=>{
     }
     return (
         <div className="body">
-            <nav className="navbar d-flex justify-content-center"><i className="bi bi-file-earmark-person m-1"></i> CV Generator</nav>
-            <div className="Generator d-flex justify-content-center"> 
-                <div className={!toggleView ? "input-form" : "d-none"}>
+            <nav className="navbar"><img src="logo-title.png" alt="logo-title"/></nav>
+            <div className="Generator"> 
+                <div className="input-form">
                     <PersonalDetails personalDetails={personalDetails} onChange={handlechange}/>
                     <Summary summary={summary} onChange={handleSummaryChange}/>
                     <Experience handleSubmit={handleExperienceSubmit}/>
@@ -72,12 +75,15 @@ const App = ()=>{
                     <Education handleSubmit={handleEducationSubmit}/>
                     <Language handleSubmit={handleLanguageSubmit}/>
                 </div>
-                <div className="function-buttons">
-                    <button className="btn btn-primary btn-view" onClick={()=>setToggleView(!toggleView)}><i className="bi bi-eye"></i> View CV</button>
-                    <button className="btn btn-secondary btn-print"><i class="bi bi-printer"></i> Print CV</button>
+                <div className="cv-template" style={toggleView ? {display:"block"} : {display:"none"}}>
+                    <CVTemplate ref={printableRef} personalDetails={personalDetails} summary={summary} experience={experienceArray} skills={skills} education={educationArray} languages={languagesArray}/> 
                 </div>
-                <div className={toggleView ? "cv-template" : "d-none"}>
-                    <CVTemplate personalDetails={personalDetails} summary={summary} experience={experienceArray} skills={skills} education={educationArray} languages={languagesArray}/> 
+                <div className="function-buttons">
+                    <button className="btn-view" onClick={()=>setToggleView(!toggleView)}><i className="bi bi-eye"></i></button>
+                    <ReactToPrint
+                    trigger={()=> <button className="btn-print"><i className="bi bi-printer"></i></button>}
+                    content={()=> printableRef.current}
+                    />
                 </div>
             </div>
         </div>

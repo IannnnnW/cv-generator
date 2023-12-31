@@ -21,8 +21,8 @@ const Education = ({handleSubmit})=>{
             
         }))
     }
-    function onSubmit(event){
-        event.preventDefault()
+    function onSubmit(e){
+        e.preventDefault()
         handleSubmit(education)
         setEducation({
             id: nextId + 1,
@@ -32,6 +32,7 @@ const Education = ({handleSubmit})=>{
             from: '',
             to: ''
         })
+        e.target.reset()
     }
     return (
         <form className="education card p-2" onSubmit={onSubmit}>

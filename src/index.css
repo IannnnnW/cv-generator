@@ -1,14 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@100&display=swap');
+html{
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
 .card{
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid lightgray;
 }
 .bi:hover{
   background-color: white !important;
   border: none;
 }
 .navbar{
-  background-color: lightgray;
-  font-size: 25px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Generator{
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+
 }
 p{
   padding:0px;
@@ -17,7 +29,7 @@ p{
 
 .input-box{
   border: none;
-  width: 320px;
+  width: 100%;
 }
 .input-box:hover{
   border-bottom: 1px solid lightgray;
@@ -26,7 +38,6 @@ p{
   border: none;
 }
 .personal-details{
-  width: 340px;
   margin: 25px;
 }
 .personal-details > .card{
@@ -36,39 +47,35 @@ p{
   margin: 25px;
 }
 .personal-summary>.card{
-  width: 340px;
-  height: 200px;
+  width: 100%;
+  height: 150px;
   padding: 5px;
+
 }
 .experience{
-  width: 340px;
   margin: 25px;
 }
 
 .experience-summary{
-  width: 320px;
+  width: 95%;
 }
 .bi:hover{
-  background-color: lightgrey;
   padding: 5px;
   border-radius: 20px;
 }
-.skills{
-  width: 340px;
+.skills{  
   margin: 25px;
 }
 .education{
-  width: 340px;
   margin: 25px;
 }
 .language{
-  width: 340px;
   margin: 25px;
 }
 .cv-template{
   margin: 25px;
-  width: 800px;
 }
+
 .header{
   border-bottom: 1px solid lightgray;
 }
@@ -110,41 +117,45 @@ p{
 .function-buttons{
   display: none;
 }
-@media screen and (max-width: 700px){
+
+.skill-body{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+@media screen and (max-width: 667px){
   .Generator{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 950px;
   }
-  .personal-details{
-    max-width: 350px;
-  }
+  
   .personal-details > .card{
     padding: 10px;
   }
   .personal-summary>.card{
-    max-width: 350px;
-    height: 250px;
-  }
-  .experience{
-    max-width: 350px;
-  }
-  .skills{
-    max-width: 350px;
-  }
-  .education{
-    max-width: 350px;
-  }
-  .language{
-    max-width: 350px;
+    height: 200px;
   }
   .cv-template{
-    max-width: 350px;
+    display: none;
+    position: fixed;
+    top:5px;
+    height: 90vh;
+    width: 90vw;
+    min-width: min-content;
+    overflow-y: auto;
+    overflow-x: auto;
   }
-  .experience-summary{
-    width: 180px;
+  .section-one, 
+  .section-two, 
+  .section-three, 
+  .section-four, 
+  .section-five{
+    font-size: 13px !important;
+  }
+  .header{
+    font-size: 10px;
   }
   .skill-body{
     display: flex;
@@ -152,19 +163,35 @@ p{
   }
   .function-buttons{
     display: flex;
-    gap: 100px;
-    position: fixed;
+    position: sticky;
+    right: 33px;
     bottom: 0;
-    left: 20px;
-    width: 100%;
+    justify-content: space-between;
     color: #fff;
-    padding: 10px;
+    padding: 5px;
   }
   .person{
-    display: none;
+    display: block;
   }
-  .cv-template{
-    height: 900px;
-    width: 500px;
+
+  .btn-view, .btn-print{
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  border: none;
+  }
+  .bi-printer, .bi-eye{
+    font-size: 30px;
+    padding: 5px;
+    color: #60b0f4;
+  }
+  
+}
+
+@media (min-width: 668px) and (max-width: 992px){
+  .Generator{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
   }
 }

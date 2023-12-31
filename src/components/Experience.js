@@ -28,16 +28,7 @@ const Experience = ({handleSubmit})=>{
         e.preventDefault()
         handleSubmit(experience)
         setOpen(false)
-        setExperience({
-            title:'',
-            company: '',
-            from: '',
-            to: '',
-            city: '',
-            country: '',
-            isCurrent: false,
-            jobDescription:''
-        })
+        e.target.reset()
     }
     return (
         <form className="experience card p-2" onSubmit={onFormSubmit}>
