@@ -18,8 +18,7 @@ html{
 .Generator{
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+  grid-template-columns: 40% auto 1rem;
 
 }
 p{
