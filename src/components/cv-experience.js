@@ -1,15 +1,14 @@
 import React from "react"
+import '../index.css'
+
 const Experience = ({title, from, to, company, city, country, jobDescription, isCurrent}) =>{
     return(
         <div className="mb-3">
-            <div className="d-flex gap-3">
-                <h6>Title: <span className="text">{title}</span></h6>
-                <h6>From: <span className="text">{from}</span></h6>
-                {isCurrent ? <h6>To: <span className="text">Current</span></h6> : <h6>To: <span className="text">{to}</span></h6>}
-            </div>
-            <div className="d-flex gap-3">
-                <h6>Company: <span className="text">{company}</span></h6>
-                <h6>City, Country: <span className="text">{city}, {country}</span></h6>
+            <div className="d-flex flex-column">
+                <h6><span className="text">{title} at {company}, {city}, {country}</span></h6>
+                <div className="d-flex gap-1">
+                    <span className="duration">from {from}</span> {isCurrent ? <span className="duration">to Current</span> : <span className="duration">{`to ${to}`}</span>}
+                </div>
             </div>
             <div className="job-description">
                 <span className="text">

@@ -9,6 +9,7 @@ const PersonalDetails = ({personalDetails, onChange})=>{
             <div className="card d-flex flex-column">
                 <Input  placeholder='First Name' value={personalDetails.firstName} onChange={onChange} name='firstName'/>
                 <Input  placeholder='Second Name' value={personalDetails.secondName} onChange={onChange} name='secondName'/>
+                <Input  placeholder='Profession' value={personalDetails.profession} onChange={onChange} name='profession'/>
                 <Input  placeholder='City' value={personalDetails.city} onChange={onChange} name='city'/>
                 <Input  placeholder='Country' value={personalDetails.country} onChange={onChange} name='country'/>
                 <Input  placeholder='Telephone' value={personalDetails.telephone} onChange={onChange} name='telephone'/>

@@ -3,10 +3,15 @@ body{
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
+  padding: 0;
+  margin: 0;
 }
 a{
   text-decoration: none;
   color: #000;
+}
+li{
+  list-style: none;
 }
 .card{
   border: 1px solid lightgray;
@@ -63,14 +68,20 @@ border: none;
 
 .input-box{
   border: none;
+  padding: 0.5rem;
   width: 100%;
 }
 .input-box:hover{
   border-bottom: 1px solid lightgray;
 }
-.input-box:focus{
-  border: none;
+input:focus {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); 
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; 
 }
+
 .personal-details{
   margin: 25px;
 }
@@ -89,12 +100,30 @@ border: none;
 .experience{
   margin: 25px;
 }
-
+.bi:hover{
+  cursor: pointer;
+}
+.experience-fields{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.duration{
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 600;
+  color: rgb(180, 176, 176);
+}
 .experience-summary{
-  width: 95%;
+  width: auto;
+}
+.date-label{
+  font-size: 12px;
+  margin-left: 0.5rem;
+  font-weight: 600;
+  color: lightgray;
 }
 .bi:hover{
-  padding: 5px;
   border-radius: 20px;
 }
 .skills{  
@@ -103,44 +132,41 @@ border: none;
 .education{
   margin: 25px;
 }
+.education-summary{
+  width: auto;
+}
+.education-title{
+  display: flex;
+  align-items: center;
+}
 .language{
   margin: 25px;
 }
 .cv-template{
   margin: 25px;
 }
-
-.header{
-  border-bottom: 1px solid lightgray;
+.cv{
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  gap: 2rem;
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 350;
+  font-style: normal;
 }
+
+
 .person{
   height: 100px;
 }
-.section-one, 
-.section-two, 
-.section-three, 
-.section-four, 
-.section-five
-{
-  border-bottom: 1px solid lightgray;
-}
-.skill{
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-}
+
 .language-section{
   margin: 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
 }
-.text{
-  padding: 0;
-  margin: 0;
-  font-weight: 100;
-}
+
 .cv-education{
   margin-bottom: 10px;
   gap: 200px;
@@ -153,12 +179,6 @@ border: none;
   display: none;
 }
 
-.skill-body{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 100px;
-}
 
 @media screen and (max-width: 667px){
   .Generator{

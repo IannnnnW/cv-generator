@@ -1,15 +1,20 @@
 import React from "react";
-
-const Education = ({award, institute, city, from, to})=>{
+import '../index.css'
+const Education = ({award, institute, city, from, to, educationDescription})=>{
     
     return(
         <div className="cv-education d-flex dis">
             <div>
-                <h6>Award: <span className="text">{award}</span></h6>
-                <h6>Institute, City: <span className="text">{institute}, {city}</span></h6>
-                <div className="d-flex gap-5">
-                    <h6>From: <span className="text">{from}</span></h6>
-                    <h6>To: <span className="text">{to}</span></h6>
+                <h6><span className="text">{award}, {institute}, {city} </span></h6>
+                <span className="text"></span>
+                <div className="d-flex gap-1">
+                    <span className="duration">{from} to</span>
+                    <span className="duration"> {to}</span>
+                </div>
+                <div className="education-description">
+                    <span className="text">
+                    {educationDescription}
+                    </span>
                 </div>
             </div>
         </div>

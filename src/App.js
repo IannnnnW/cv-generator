@@ -15,6 +15,7 @@ const App = ()=>{
     const [personalDetails, setPersonalDetails] = useState({
         firstName: '', 
         secondName: '', 
+        profession: '',
         city: '',
         country: '',
         telephone: '', 

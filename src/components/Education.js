@@ -11,7 +11,8 @@ const Education = ({handleSubmit})=>{
         institute: '',
         city: '',
         from: '',
-        to: ''
+        to: '',
+        educationDescription: ''
     })
     function onChange(event){
         let {name, value} = event.target;
@@ -30,7 +31,8 @@ const Education = ({handleSubmit})=>{
             institute: '',
             city: '',
             from: '',
-            to: ''
+            to: '',
+            educationDescription: ''
         })
         e.target.reset()
     }
@@ -40,14 +42,13 @@ const Education = ({handleSubmit})=>{
                 <h5><i className="bi bi-mortarboard m-1"></i>Education</h5>
                 {isOpen ? <i className="bi bi-arrow-up-circle" onClick={()=>setOpen(false)}/> : <i className="bi bi-arrow-down-circle" onClick={()=>setOpen(true)}/>}
             </div>
-            <div className={isOpen ? 'd-block' : 'd-none'}>
+            <div className={isOpen ? 'd-flex flex-column' : 'd-none'}>
                 <Input  placeholder='Award' name='award' onChange={onChange}/>
                 <Input  placeholder='Institute' name="institute" onChange={onChange}/>
                 <Input  placeholder='City' name="city" onChange={onChange}/>
-                <div>
-                    <label>From: <input className="input-box" type="date" name="from" onChange={onChange}/></label>
-                    <label>To: <input className="input-box" type="date" name="to" onChange={onChange}/></label>
-                </div>
+                <label><span  className="date-label">From</span><input className="input-box" type="date" name="from" onChange={onChange}/></label>
+                <label><span  className="date-label">To</span> <input className="input-box" type="date" name="to" onChange={onChange}/></label>
+                <textarea className="card education-summary mt-3" placeholder="Description..." name='educationDescription' onChange={onChange}/>
                 <button type="submit" className="btn btn-secondary mt-2">Add</button>
             </div>
         </form>

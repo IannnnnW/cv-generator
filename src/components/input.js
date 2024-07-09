@@ -1,5 +1,5 @@
 import React from "react";
-
+import '../index.css'
 const Input = ({placeholder, defaultValue, onChange, name})=>{
     return(
         <label>
