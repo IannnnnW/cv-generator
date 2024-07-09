@@ -65,7 +65,10 @@ const App = ()=>{
     }
     return (
         <div className="body">
-            <nav className="navbar"><img src="logo-title.png" alt="logo-title"/></nav>
+            <nav className="navbar mx-4">
+                <img src="logo-title.png" alt="logo-title" className="logo"/>
+                <a href="https://github.com/IannnnnW/cv-generator" className="github-link"><img alt="github" src="github-mark.png" className="github-logo"/> View on GitHub</a>
+            </nav>
             <div className="Generator"> 
                 <div className="input-form">
                     <PersonalDetails personalDetails={personalDetails} onChange={handlechange}/>

@@ -1,7 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@100&display=swap');
-html{
-  font-family: 'Poppins', sans-serif;
-  font-family: 'Roboto', sans-serif;
+body{
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+a{
+  text-decoration: none;
+  color: #000;
 }
 .card{
   border: 1px solid lightgray;
@@ -13,7 +18,16 @@ html{
 .navbar{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+}
+.logo{
+  height: 50px;
+}
+.github-logo{
+  height: 25px;
+}
+.github-link{
+  font-weight: 500;
 }
 .Generator{
   margin: 0;
