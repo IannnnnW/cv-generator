@@ -49,7 +49,7 @@ const Education = ({handleSubmit})=>{
                 <label><span  className="date-label">From</span><input className="input-box" type="date" name="from" onChange={onChange}/></label>
                 <label><span  className="date-label">To</span> <input className="input-box" type="date" name="to" onChange={onChange}/></label>
                 <textarea className="card education-summary mt-3" placeholder="Description..." name='educationDescription' onChange={onChange}/>
-                <button type="submit" className="btn btn-secondary mt-2">Add</button>
+                <button type="submit" className="btn btn-secondary mt-2 w-50 align-self-center">Add</button>
             </div>
         </form>
     )

@@ -37,7 +37,7 @@ const Experience = ({handleSubmit})=>{
                 <h5><i className="bi bi-person-workspace m-1"></i>Experience</h5>
                 {isOpen ? <i className="bi bi-arrow-up-circle" onClick={()=>setOpen(false)}/> : <i className="bi bi-arrow-down-circle" onClick={()=>setOpen(true)}/>}
             </div>
-            <div className={isOpen ? 'd-block' : 'd-none'}>
+            <div className={isOpen ? 'd-flex flex-column' : 'd-none'}>
                 <div className='experience-fields'>
                     <Input  placeholder='Title' onChange={handleChange} name='title'/>
                     <Input  placeholder='Company' onChange={handleChange} name='company'/>
@@ -48,7 +48,7 @@ const Experience = ({handleSubmit})=>{
                     <label>Current ? <input type="checkbox" onChange={handleChange} name="isCurrent"/></label>
                     <textarea className="card experience-summary mt-3" placeholder="Description..." name='jobDescription' onChange={handleChange}/>
                 </div>
-                <button className="btn btn-secondary mt-2 align-self-center w-25" type="submit">Add</button>
+                <button className="btn btn-secondary mt-2 w-50 align-self-center" type="submit">Add</button>
             </div>
         </form>
     )
